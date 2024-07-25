@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Detection App</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="./static/css/materialize.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+        .dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        h4 {
+            color: #007bff;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            color: #495057;
+        }
+
+        input,
+        select {
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: #32a84a;
+            color: #ffffff;
+        }
+
+        button:hover {
+            background-color: #2a7f3d;
+        }
+
+        .text-start a {
+            color: #32a84a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .text-start a:hover {
+            text-decoration: underline;
+        }
+
+        .alert {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="{{ url_for('home') }}">Chatbot</a></li>
+        <li><a href="{{ url_for('tentangweb.html') }}">Chatbot</a></li>
+
+    </ul>
+
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <div class="row">
+                <form action='/' method="post" class="col s12" enctype="multipart/form-data">
+                    <!-- Rest of your form content -->
+
+                    <!-- Updated Application Information Section -->
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="card-panel teal">
+                                <span class="white-text">
+                                    <h5>Informasi Aplikasi Deteksi Kendaraan</h5>
+                                    <p>Selamat datang di aplikasi kami! Aplikasi ini dirancang untuk mendeteksi dan menghitung jumlah kendaraan pada suatu area. Dapatkan informasi lalu lintas yang akurat dan berguna.</p>
+                                    <!-- Add more information as needed -->
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Updated Application Information Section -->
+
+                    <div class="row">
+                        <!-- Rest of your form content -->
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./static/js/materialize.js"></script>
+    <script type="text/javascript">
+        document.getElementById('image_upload').onchange = function () {
+            document.getElementById('image_name').value = this.value.slice(12, 100);
+        };
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Head section remains unchanged -->
+    <meta charset="UTF-8" />
+    <title>Chatbot</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/style.css') }}"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Navigation menu remains unchanged -->
+
+    <div class="section no-pad-bot" id="index-banner">
+      <div class="container">
+        <!-- Form for chatbot interaction -->
+        <form id="chatForm">
+          <div class="row">
+            <div class="input-field col s8">
+              <input id="userInput" type="text" class="validate" />
+              <label for="userInput">Chat with the Chatbot</label>
+            </div>
+            <div class="input-field col s4">
+              <button type="button" onclick="sendMessage()" class="btn">
+                Send
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <!-- Chatbot response display -->
+        <div id="chatbotResponse" class="row">
+          <!-- The chatbot response will be displayed here -->
+        </div>
+
+        <!-- Other content remains unchanged -->
+      </div>
+    </div>
+
+    <!-- Scripts remain unchanged -->
+
+    <!-- Additional script for chatbot interaction -->
+    <script>
+      function sendMessage() {
+        var userText = document.getElementById("userInput").value;
+        appendUserMessage(userText);
+
+        // Make an AJAX request to Flask endpoint for chatbot response
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "/get?msg=" + userText, true);
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            var chatbotResponse = JSON.parse(xhr.responseText);
+            appendChatbotMessage(chatbotResponse.response);
+          }
+        };
+        xhr.send();
+      }
+
+      function appendUserMessage(message) {
+        // Append user message to the chat display
+        document.getElementById("chatbotResponse").innerHTML +=
+          '<div class="col s12"><p><strong>You:</strong> ' +
+          message +
+          "</p></div>";
+      }
+
+      function appendChatbotMessage(response) {
+        // Append chatbot response to the chat display
+        document.getElementById("chatbotResponse").innerHTML +=
+          '<div class="col s12"><p><strong>Chatbot:</strong> ' +
+          response +
+          "</p></div>";
+      }
+    </script>
+  </body>
+</html>

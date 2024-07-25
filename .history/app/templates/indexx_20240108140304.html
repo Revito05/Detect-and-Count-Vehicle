@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu navbar</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="./static/css/materialize.css">
+</head>
+
+<body>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="./whatsapp.html">Contact Us</a></li>
+        <li><a href="\A.CAPSTONE PROJECT\Detect-and-Count-Vehicle-using-Flask-main\Detect-and-Count-Vehicle-using-Flask-main\templates\index.html">Chatbot</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">About</a>
+            
+        </li>
+    </ul>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <div class="row">
+        <form action='/' method="post" class="col s12" enctype="multipart/form-data">
+          <div class="row">
+
+            <div class="input-field col s5" style="margin-left: 20px; margin-top: 150px">
+              <div class = "row">
+
+                  <div class="row">
+                    <label for="first_name"><b>Upload Image</b></label><br>
+                    <div class = "file-field input-field">
+                      <div class = "btn" style="background-color: #32a84a">
+                        <span>Browse</span>
+                        <input type = "file" name="image_upload" id="image_upload" />
+                      </div>
+                      <div class = "file-path-wrapper">
+                        <input class = "file-path validate" type = "text" placeholder = "Upload Image" name="image_name" id="image_name" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row center" style="margin-top: 50px">
+                    <button id="submit" type="submit" class="btn-large" style="background-color: #32a84a">Process</button>
+                  </div>
+
+              </div>
+            </div>
+
+            <div class="input-field col s3">
+              <div style="text-align: center; padding-top: 50px; margin-left: 100px">
+                <img src="{{ url_for('static',filename=full_filename) }}" width="500" height="300">
+              </div>
+              {% if pred != None %}
+              <div style="width: 500px; margin-left: 100px; text-align: center;" >
+                <h5>{{ pred }}</h5>
+              </div>
+              {% endif %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">USERNAME: {{ session.username }}</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Pengaturan</a></li>              
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="{{url_for('logout')}}">Logout</a></li>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+
+  <!--  Scripts-->
+  <script src="./static/js/materialize.js"></script>
+  <script type="text/javascript">
+    document.getElementById('image_upload').onchange = function () {
+        document.getElementById('image_name').value = this.value.slice(12,100);
+    };
+  </script>
+
+  </body>
+</html>

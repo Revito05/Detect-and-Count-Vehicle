@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Menu Utama</title>
+  </head>
+  <body>
+    <!-- start navbar -->
+    <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+        <div class="container">
+        <a class="navbar-brand" href="#">DETEKSI JENIS KENDARAAN</a>
+        <ul class="nav nav-pills">
+
+       <!-- START MENU UNTUK LEVEL ADMIN -->
+        {% if session['level'] == 'Admin' : %}
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tentang</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Kontak</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Kritik & Saran</a>
+          </li>
+        <!-- END MENU UNTUK LEVEL ADMIN -->
+        {% else :%}
+        <!-- START MENU UNTUK LEVEL PETUGAS -->
+        <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>         
+          <li class="nav-item">
+            <a class="nav-link" href="#">Jumlah Jenis Kendaraan</a>
+          </li><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu navbar</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="./static/css/materialize.css">
+</head>
+
+<body>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#marketing">Marketing</a></li>
+        <li><a href="#business">Business</a></li>
+        <li><a href="per.html">Contact Us</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Design</a>
+            <div class="dropdown-content">
+                <a href="#">Web Design</a>
+                <a href="#">App Design</a>
+                <a href="#">Graphic Design</a>
+            </div>
+        </li>
+    </ul>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <div class="row">
+        <form action='/' method="post" class="col s12" enctype="multipart/form-data">
+          <div class="row">
+
+            <div class="input-field col s5" style="margin-left: 20px; margin-top: 150px">
+              <div class = "row">
+
+                  <div class="row">
+                    <label for="first_name"><b>Upload Image</b></label><br>
+                    <div class = "file-field input-field">
+                      <div class = "btn" style="background-color: #32a84a">
+                        <span>Browse</span>
+                        <input type = "file" name="image_upload" id="image_upload" />
+                      </div>
+                      <div class = "file-path-wrapper">
+                        <input class = "file-path validate" type = "text" placeholder = "Upload Image" name="image_name" id="image_name" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row center" style="margin-top: 50px">
+                    <button id="submit" type="submit" class="btn-large" style="background-color: #32a84a">Process</button>
+                  </div>
+
+              </div>
+            </div>
+
+            <div class="input-field col s3">
+              <div style="text-align: center; padding-top: 50px; margin-left: 100px">
+                <img src="{{ url_for('static',filename=full_filename) }}" width="500" height="300">
+              </div>
+              {% if pred != None %}
+              <div style="width: 500px; margin-left: 100px; text-align: center;" >
+                <h5>{{ pred }}</h5>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+
+  <!--  Scripts-->
+  <script src="./static/js/materialize.js"></script>
+  <script type="text/javascript">
+    document.getElementById('image_upload').onchange = function () {
+        document.getElementById('image_name').value = this.value.slice(12,100);
+    };
+  </script>
+
+  </body>
+</html>
+
+        <!-- END MENU UNTUK LEVEL PETUGAS -->
+        {% endif %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">USERNAME: {{ session.username }}</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Pengaturan</a></li>              
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="{{url_for('logout')}}">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+    </div>
+      </nav>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!-- templates/contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Your App</title>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <!-- Tambahkan link untuk halaman-halaman lain jika diperlukan -->
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Contact Information</h2>
+        <p>You can reach us through the following contact information:</p>
+
+        <address>
+            <strong>Email:</strong> info@example.com<br>
+            <strong>Phone:</strong> +123 456 789
+        </address>
+
+        <p>Alternatively, you can contact us via WhatsApp:</p>
+
+        <!-- Tautan langsung ke WhatsApp -->
+        <a href="https://wa.me" target="_blank">Contact via WhatsApp</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your App. All rights reserved.</p>
+    </footer>
+</body>
+</html>

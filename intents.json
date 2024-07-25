@@ -1,0 +1,154 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hai", "Halo", "Selamat pagi", "Selamat siang", "Selamat malam"],
+      "responses": ["Hai! Bagaimana saya bisa membantu Anda?", "Halo!", "Selamat pagi/siang/malam!"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Selamat tinggal", "Sampai jumpa", "Sampai nanti", "Dadah"],
+      "responses": ["Selamat tinggal! Semoga harimu menyenangkan.", "Sampai jumpa!", "Dadah!"]
+    },
+    {
+      "tag": "terima_kasih",
+      "patterns": ["Terima kasih", "Makasih", "Salamat", "Thanks"],
+      "responses": ["Sama-sama!", "Tidak masalah.", "Senang bisa membantu!"]
+    },
+    {
+      "tag": "deteksi_kendaraan",
+      "patterns": ["Deteksi kendaraan", "Apa jenis kendaraan ini?", "Identifikasi kendaraan", "Jenis kendaraan"],
+      "responses": ["Saya adalah chatbot dan tidak dilengkapi untuk pemrosesan gambar secara real-time. Namun, Anda dapat menggunakan alat atau API pengenalan gambar untuk deteksi kendaraan."]
+    },
+    {
+      "tag": "bantuan",
+      "patterns": ["Bantuan", "Pertolongan", "Dukungan", "Apa yang bisa kamu lakukan?"],
+      "responses": ["Saya dapat memberikan informasi, menjawab pertanyaan, dan membantu Anda. Silakan bertanya apa saja!"]
+    },
+    {
+      "tag": "tidak_diketahui",
+      "patterns": ["", "Saya tidak tahu", "Tidak yakin", "Tidak bisa menjawab itu"],
+      "responses": ["Maaf, saya tidak memiliki informasi untuk menjawab itu."]
+    },
+    {
+      "tag": "informasi_kendaraan",
+      "patterns": ["Beritahu saya tentang kendaraan", "Ceritakan lebih lanjut tentang kendaraan", "Detail kendaraan"],
+      "responses": ["Kendaraan adalah alat transportasi yang digunakan untuk berpindah dari satu tempat ke tempat lain. Kendaraan dapat berupa mobil, sepeda motor, bus, truk, dan banyak lagi."]
+    },
+    {
+      "tag": "jenis_kendaraan",
+      "patterns": ["Berapa banyak jenis kendaraan yang ada?", "Sebutkan jenis kendaraan", "List kendaraan"],
+      "responses": ["Beberapa jenis kendaraan meliputi mobil, sepeda motor, sepeda, bus, truk, kereta, dan kapal. Setiap jenis kendaraan memiliki karakteristik dan kegunaannya masing-masing."]
+    },
+    {
+      "tag": "pesan_kendaraan",
+      "patterns": ["Bagaimana cara memesan kendaraan?", "Proses pemesanan kendaraan", "Saran pemesanan kendaraan"],
+      "responses": ["Untuk memesan kendaraan, Anda bisa menggunakan layanan aplikasi penyewaan kendaraan atau menghubungi perusahaan transportasi. Pilih jenis kendaraan dan ikuti langkah-langkah pemesanan yang disediakan."]
+    },
+    {
+      "tag": "tidak_paham",
+      "patterns": ["Apa yang kamu maksud?", "Saya tidak mengerti", "Bisa dijelaskan lagi?"],
+      "responses": ["Maaf, jika ada yang kurang jelas atau membingungkan. Silakan beri tahu saya dengan cara yang berbeda atau tanyakan pertanyaan lain."]
+    },
+    {
+      "tag": "tujuan_kendaraan",
+      "patterns": ["Apa tujuan kendaraan?", "Maksud dari penggunaan kendaraan", "Kenapa kendaraan dibuat?"],
+      "responses": ["Tujuan utama kendaraan adalah menyediakan sarana transportasi untuk memudahkan mobilitas manusia dan barang dari satu tempat ke tempat lain. Selain itu, kendaraan juga digunakan untuk berbagai keperluan seperti bisnis, rekreasi, dan transportasi umum."]
+    },
+    {
+      "tag": "perawatan_kendaraan",
+      "patterns": ["Bagaimana cara merawat kendaraan?", "Tips perawatan kendaraan", "Kebersihan kendaraan"],
+      "responses": ["Merawat kendaraan melibatkan beberapa langkah, seperti perawatan rutin, penggantian oli, pemeriksaan ban, dan kebersihan kendaraan. Pastikan untuk mengikuti panduan pemeliharaan yang disediakan oleh produsen kendaraan."]
+    },
+    {
+      "tag": "keamanan_kendaraan",
+      "patterns": ["Cara menjaga keamanan kendaraan", "Tips keamanan berkendara", "Perlindungan kendaraan"],
+      "responses": ["Untuk menjaga keamanan kendaraan, pastikan kendaraan terkunci dengan baik, hindari tempat parkir yang sepi, dan gunakan sistem keamanan tambahan jika diperlukan. Selalu periksa rem, lampu, dan kondisi kendaraan sebelum berkendara."]
+    },
+    {
+      "tag": "hiburan_kendaraan",
+      "patterns": ["Ada tips hiburan selama berkendara?", "Cara membuat perjalanan lebih menyenangkan", "Hiburan di dalam kendaraan"],
+      "responses": ["Selama berkendara, Anda dapat menikmati hiburan dengan mendengarkan musik, podcast, atau audiobook. Pastikan untuk membuat daftar putar favorit sebelum perjalanan dan tetap fokus pada jalanan."]
+    },
+    {
+      "tag": "trend_kendaraan",
+      "patterns": ["Apa tren terbaru di dunia kendaraan?", "Inovasi kendaraan terkini", "Apa yang sedang tren di industri otomotif?"],
+      "responses": ["Tren terbaru di dunia kendaraan termasuk pengembangan kendaraan listrik, otonom, dan ramah lingkungan. Inovasi lainnya melibatkan teknologi terkini seperti konektivitas yang lebih baik dan sistem keamanan canggih."]
+    },
+    {
+      "tag": "kendaraan_listrik",
+      "patterns": ["Beritahu saya tentang kendaraan listrik", "Keunggulan mobil listrik", "Bagaimana cara kerja mobil listrik?"],
+      "responses": ["Kendaraan listrik menggunakan tenaga listrik sebagai sumber energi. Keunggulan mereka meliputi emisi rendah, biaya operasional yang lebih murah, dan kontribusi positif terhadap lingkungan. Baterai mereka menyimpan energi untuk menggerakkan kendaraan."]
+    },
+    {
+      "tag": "mobil_otonom",
+      "patterns": ["Apa itu mobil otonom?", "Bagaimana mobil otonom bekerja?", "Tahukah Anda tentang kendaraan otonom?"],
+      "responses": ["Mobil otonom adalah kendaraan yang mampu beroperasi tanpa intervensi pengemudi manusia. Mereka menggunakan teknologi seperti sensor, kamera, dan kecerdasan buatan untuk mengenali lingkungan sekitar dan membuat keputusan berkendara."]
+    },
+    {
+      "tag": "jalan_raya_cerdas",
+      "patterns": ["Apa itu jalan raya cerdas?", "Ciri-ciri jalan raya cerdas", "Inovasi terkini dalam infrastruktur jalan raya"],
+      "responses": ["Jalan raya cerdas melibatkan penggunaan teknologi untuk meningkatkan efisiensi dan keamanan transportasi. Ini bisa mencakup sensor, sinyal lalu lintas pintar, dan komunikasi antar kendaraan. Tujuannya adalah menciptakan sistem transportasi yang lebih pintar dan aman."]
+    },
+    {
+      "tag": "kendaraan_terbang",
+      "patterns": ["Apa pendapatmu tentang kendaraan terbang?", "Inovasi kendaraan udara", "Apa saja kendaraan terbang yang dikembangkan?"],
+      "responses": ["Kendaraan terbang atau kendaraan udara sedang mengalami perkembangan pesat. Ada drone untuk berbagai keperluan, pesawat tanpa awak, dan bahkan konsep kendaraan terbang pribadi. Ini adalah bagian dari upaya menuju mobilitas udara yang lebih efisien dan terkoneksi."]
+    },
+    {
+      "tag": "kendaraan_ramah_lingkungan",
+      "patterns": ["Apakah ada kendaraan ramah lingkungan?", "Mobil hijau terbaru", "Inovasi untuk lingkungan"],
+      "responses": ["Banyak produsen kendaraan berinovasi untuk menciptakan kendaraan ramah lingkungan. Mobil listrik, hibrida, dan bahan bakar hidrogen menjadi fokus utama. Ini adalah langkah positif untuk mengurangi dampak lingkungan dari transportasi."]
+    },
+    {
+      "tag": "tata_cara_pembuatan_kendaraan",
+      "patterns": ["Bagaimana cara membuat kendaraan?", "Proses produksi kendaraan", "Tahapan pembuatan mobil"],
+      "responses": ["Proses pembuatan kendaraan melibatkan desain, pengembangan prototipe, produksi massal, dan uji kelayakan. Setiap langkah memerlukan kerjasama tim yang kuat dan teknologi canggih untuk menciptakan kendaraan berkualitas tinggi."]
+    },
+    {
+      "tag": "keunggulan_kendaraan_elektrik",
+      "patterns": ["Apa keunggulan kendaraan listrik?", "Mengapa memilih mobil listrik?", "Manfaat kendaraan elektrik"],
+      "responses": ["Kendaraan listrik memiliki keunggulan seperti emisi nol, biaya operasional yang lebih rendah, dan kontribusi positif terhadap lingkungan. Selain itu, mereka juga memberikan pengalaman berkendara yang tenang dan bertenaga."]
+    },
+    {
+      "tag": "perkembangan_kendaraan",
+      "patterns": ["Bagaimana perkembangan terkini kendaraan?", "Inovasi terbaru di industri otomotif", "Trend kendaraan masa depan"],
+      "responses": ["Perkembangan terkini di industri otomotif mencakup teknologi otonom, kendaraan listrik, dan konektivitas yang semakin canggih. Industri terus berinovasi untuk menciptakan kendaraan yang lebih aman, efisien, dan ramah lingkungan."]
+    },
+    {
+      "tag": "pilihan_kendaraan_hijau",
+      "patterns": ["Apa pilihan kendaraan ramah lingkungan?", "Mobil hijau terbaik", "Pilihan transportasi berkelanjutan"],
+      "responses": ["Pilihan kendaraan ramah lingkungan termasuk mobil listrik, hibrida, dan sepeda listrik. Semakin banyak orang beralih ke transportasi berkelanjutan untuk mendukung lingkungan dan mengurangi emisi karbon."]
+    },
+    {
+      "tag": "kendaraan_otonom",
+      "patterns": ["Bagaimana kendaraan otonom bekerja?", "Tahukah Anda tentang mobil tanpa pengemudi?", "Keamanan kendaraan otonom"],
+      "responses": ["Kendaraan otonom menggunakan sensor dan teknologi kecerdasan buatan untuk beroperasi tanpa intervensi manusia. Keamanan adalah fokus utama, dengan sistem yang dirancang untuk mendeteksi dan merespons lingkungan sekitar."]
+    },
+    {
+      "tag": "teknologi_terkini_kendaraan",
+      "patterns": ["Teknologi apa yang terkini dalam kendaraan?", "Fitur terbaru mobil", "Inovasi teknologi di dunia otomotif"],
+      "responses": ["Teknologi terkini dalam kendaraan mencakup sistem infotainment canggih, asisten pengemudi, dan konektivitas yang memungkinkan. Ini bertujuan meningkatkan pengalaman berkendara dan memberikan kenyamanan yang lebih baik."]
+    },
+    {
+      "tag": "jenis_kendaraan",
+      "patterns": ["Jenis kendaraan apa yang paling populer?", "Kendaraan apa yang banyak digunakan?", "Tren jenis kendaraan"],
+      "responses": ["Jenis kendaraan yang paling populer bervariasi, termasuk mobil pribadi, sepeda motor, dan sepeda. Namun, tren terkini juga melibatkan peningkatan penggunaan kendaraan listrik dan transportasi umum yang ramah lingkungan."]
+    },
+    {
+      "tag": "perbandingan_kendaraan",
+      "patterns": ["Bagaimana perbandingan antara mobil dan sepeda motor?", "Kelebihan dan kekurangan mobil dan sepeda motor", "Pilih mobil atau sepeda motor?"],
+      "responses": ["Perbandingan antara mobil dan sepeda motor tergantung pada kebutuhan individu. Mobil memberikan kenyamanan dan perlindungan lebih, sementara sepeda motor lebih efisien dalam lalu lintas padat."]
+    },
+    {
+      "tag": "penggunaan_kendaraan_listrik",
+      "patterns": ["Bagaimana cara penggunaan kendaraan listrik?", "Charging station untuk mobil listrik", "Pengalaman menggunakan kendaraan listrik"],
+      "responses": ["Penggunaan kendaraan listrik melibatkan pengisian baterai di stasiun pengisian khusus. Keuntungan meliputi emisi rendah dan biaya operasional yang lebih murah, meskipun infrastruktur pengisian masih berkembang."]
+    },
+    {
+      "tag": "perkembangan_transportasi_publik",
+      "patterns": ["Bagaimana perkembangan transportasi publik?", "Inovasi dalam transportasi umum", "Penggunaan teknologi dalam angkutan umum"],
+      "responses": ["Perkembangan transportasi publik melibatkan pemanfaatan teknologi untuk meningkatkan efisiensi dan kenyamanan. Aplikasi pemesanan, pembayaran digital, dan armada ramah lingkungan menjadi tren umum dalam transportasi umum."]
+    }
+  ]
+}
